@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Макси Чайдың премиум шай коллекциясы. 3D форматтағы қара, жасыл, жеміс және шөп шайлары.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProductGroup",
+        "name": "Макси Чай Коллекциясы",
+        "description": "Қара, жасыл, жеміс және шөп шайларының премиум 3D коллекциясы."
+    }
+    </script>
+    <title data-i18n="products_title">Біздің Шай Коллекциямыз</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <section id="products" class="products">
+        <h2 data-i18n="products_title">Біздің Шай Коллекциямыз</h2>
+        <div class="product-filters">
+            <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Барлығы</button>
+            <button class="filter-btn" data-filter="black" data-i18n="filter_black">Қара Шай</button>
+            <button class="filter-btn" data-filter="green" data-i18n="filter_green">Жасыл Шай</button>
+            <button class="filter-btn" data-filter="fruit" data-i18n="filter_fruit">Жеміс Шайы</button>
+            <button class="filter-btn" data-filter="herbal" data-i18n="filter_herbal">Шөп Шайы</button>
+            <button class="filter-btn" data-filter="premium" data-i18n="filter_premium">Премиум</button>
+        </div>
+        <div class="product-grid">
+            <!-- Қара Шай -->
+            <div class="product-card" data-category="black">
+                <div class="product-3d" id="3d-classic"></div>
+                <h3 data-i18n="product_classic_title">Макси Классик</h3>
+                <p data-i18n="product_classic_desc">Дәстүрлі қара шай, бай хош иіс.</p>
+                <button class="ar-button" data-ar="classic" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <div class="product-card" data-category="black">
+                <div class="product-3d" id="3d-earl-grey"></div>
+                <h3 data-i18n="product_earl_grey_title">Макси Эрл Грей</h3>
+                <p data-i18n="product_earl_grey_desc">Бергамот хош иісі бар қара шай.</p>
+                <button class="ar-button" data-ar="earl-grey" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <div class="product-card" data-category="black">
+                <div class="product-3d" id="3d-darjeeling"></div>
+                <h3 data-i18n="product_darjeeling_title">Макси Дарджилинг</h3>
+                <p data-i18n="product_darjeeling_desc">Жеңіл және гүлді қара шай.</p>
+                <button class="ar-button" data-ar="darjeeling" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <!-- Жасыл Шай -->
+            <div class="product-card" data-category="green">
+                <div class="product-3d" id="3d-green"></div>
+                <h3 data-i18n="product_green_title">Макси Жасыл</h3>
+                <p data-i18n="product_green_desc">Жаңа піскен жапырақтардан жасалған.</p>
+                <button class="ar-button" data-ar="green" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <div class="product-card" data-category="green">
+                <div class="product-3d" id="3d-jasmine"></div>
+                <h3 data-i18n="product_jasmine_title">Макси Жасмин</h3>
+                <p data-i18n="product_jasmine_desc">Жасмин гүлдерінің хош иісі.</p>
+                <button class="ar-button" data-ar="jasmine" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <div class="product-card" data-category="green">
+                <div class="product-3d" id="3d-sencha"></div>
+                <h3 data-i18n="product_sencha_title">Макси Сенча</h3>
+                <p data-i18n="product_sencha_desc">Жапондық дәстүрлі жасыл шай.</p>
+                <button class="ar-button" data-ar="sencha" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <!-- Жеміс Шайы -->
+            <div class="product-card" data-category="fruit">
+                <div class="product-3d" id="3d-fruit"></div>
+                <h3 data-i18n="product_fruit_title">Макси Жеміс</h3>
+                <p data-i18n="product_fruit_desc">Жемістер мен шөптердің үйлесімі.</p>
+                <button class="ar-button" data-ar="fruit" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <div class="product-card" data-category="fruit">
+                <div class="product-3d" id="3d-tropic"></div>
+                <h3 data-i18n="product_tropic_title">Макси Тропик</h3>
+                <p data-i18n="product_tropic_desc">Экзотикалық жемістердің дәмі.</p>
+                <button class="ar-button" data-ar="tropic" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <div class="product-card" data-category="fruit">
+                <div class="product-3d" id="3d-berry"></div>
+                <h3 data-i18n="product_berry_title">Макси Ягодалы</h3>
+                <p data-i18n="product_berry_desc">Жидектердің тәтті хош иісі.</p>
+                <button class="ar-button" data-ar="berry" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <!-- Шөп Шайы -->
+            <div class="product-card" data-category="herbal">
+                <div class="product-3d" id="3d-chamomile"></div>
+                <h3 data-i18n="product_chamomile_title">Макси Ромашка</h3>
+                <p data-i18n="product_chamomile_desc">Тыныштандыратын шөп шайы.</p>
+                <button class="ar-button" data-ar="chamomile" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <div class="product-card" data-category="herbal">
+                <div class="product-3d" id="3d-mint"></div>
+                <h3 data-i18n="product_mint_title">Макси Мята</h3>
+                <p data-i18n="product_mint_desc">Салқын және сергітетін дәм.</p>
+                <button class="ar-button" data-ar="mint" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <div class="product-card" data-category="herbal">
+                <div class="product-3d" id="3d-lavender"></div>
+                <h3 data-i18n="product_lavender_title">Макси Лаванда</h3>
+                <p data-i18n="product_lavender_desc">Ароматты және релаксациялық шай.</p>
+                <button class="ar-button" data-ar="lavender" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <!-- Премиум Коллекция -->
+            <div class="product-card" data-category="premium">
+                <div class="product-3d" id="3d-royal"></div>
+                <h3 data-i18n="product_royal_title">Макси Роял Бленд</h3>
+                <p data-i18n="product_royal_desc">Элиталық шайлардың қоспасы.</p>
+                <button class="ar-button" data-ar="royal" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <div class="product-card" data-category="premium">
+                <div class="product-3d" id="3d-golden"></div>
+                <h3 data-i18n="product_golden_title">Макси Голден Типс</h3>
+                <p data-i18n="product_golden_desc">Алтын ұштары бар сирек шай.</p>
+                <button class="ar-button" data-ar="golden" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+            <div class="product-card" data-category="premium">
+                <div class="product-3d" id="3d-oolong"></div>
+                <h3 data-i18n="product_oolong_title">Макси Улун</h3>
+                <p data-i18n="product_oolong_desc">Күрделі және терең дәм.</p>
+                <button class="ar-button" data-ar="oolong" data-i18n="ar_button">AR-да Көру</button>
+            </div>
+        </div>
+        <div class="tea-test">
+            <h3 data-i18n="tea_test_title">Сізге Қай Шай Жарасады?</h3>
+            <button id="start-test" data-i18n="tea_test_start">Тест Бастау</button>
+            <div id="test-questions" style="display: none;">
+                <div id="question-1">
+                    <p data-i18n="tea_test_q1">Сізге қандай дәм ұнайды?</p>
+                    <button data-answer="strong" data-i18n="tea_test_q1_a1">Күшті және қанық</button>
+                    <button data-answer="fresh" data-i18n="tea_test_q1_a2">Жаңа және жеңіл</button>
+                    <button data-answer="sweet" data-i18n="tea_test_q1_a3">Тәтті және жемісті</button>
+                    <button data-answer="calm" data-i18n="tea_test_q1_a4">Тыныш және шөптік</button>
+                    <button data-answer="elite" data-i18n="tea_test_q1_a5">Элиталық және күрделі</button>
+                </div>
+                <div id="test-result" style="display: none;">
+                    <p id="result-text"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    <div id="chatbot" class="chatbot">
+        <i class="fas fa-comment"></i>
+    </div>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
